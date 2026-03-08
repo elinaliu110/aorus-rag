@@ -666,7 +666,7 @@
     "id": 54,
     "type": "product_summary",
     "product": "AORUS MASTER 16",
-    "short_id": "ALL",
+    "short_id": "None",
     "text": "AORUS MASTER 16 三款機型（BZH、BYH、BXH）除 GPU 外規格完全相同。GPU 差異：BZH（RTX™ 5090 Laptop GPU 24GB VRAM，TDP 175W）；BYH（RTX™ 5080 Laptop GPU 16GB VRAM，TDP 175W）；BXH（RTX™ 5070 Ti Laptop GPU 12GB VRAM，TDP 140W）。效能最強款為 BZH，搭載 VRAM 最大的 GPU。入門款為 BXH，VRAM 最小。建議依 GPU 效能需求與預算選購。 / AORUS MASTER 16 — Three models (BZH, BYH, BXH) share identical specs except GPU. GPU differences: BZH (RTX 5090 Laptop GPU, 24GB VRAM, 175W TDP); BYH (RTX 5080 Laptop GPU, 16GB VRAM, 175W TDP); BXH (RTX 5070 Ti Laptop GPU, 12GB VRAM, 140W TDP). Top performance: BZH. Entry-level: BXH. Choose based on GPU needs and budget.",
     "text_zh": "AORUS MASTER 16 三款機型（BZH、BYH、BXH）除 GPU 外規格完全相同。GPU 差異：BZH（RTX™ 5090 Laptop GPU 24GB VRAM，TDP 175W）；BYH（RTX™ 5080 Laptop GPU 16GB VRAM，TDP 175W）；BXH（RTX™ 5070 Ti Laptop GPU 12GB VRAM，TDP 140W）。效能最強款為 BZH，搭載 VRAM 最大的 GPU。入門款為 BXH，VRAM 最小。建議依 GPU 效能需求與預算選購。",
     "text_en": "AORUS MASTER 16 — Three models (BZH, BYH, BXH) share identical specs except GPU. GPU differences: BZH (RTX 5090 Laptop GPU, 24GB VRAM, 175W TDP); BYH (RTX 5080 Laptop GPU, 16GB VRAM, 175W TDP); BXH (RTX 5070 Ti Laptop GPU, 12GB VRAM, 140W TDP). Top performance: BZH. Entry-level: BXH. Choose based on GPU needs and budget."
