@@ -150,7 +150,6 @@ User Query (ZH / EN / Mixed)
                    ▼
             Answer (ZH or EN)
 ```
-
 ## Model Benchmark Summary (CPU)
 
 All tests run on CPU. GPU results would reduce TTFT to ~5–15 s range.
