@@ -1,6 +1,6 @@
 # Benchmark Evaluation Report
 
-> AORUS MASTER 16 RAG — CPU-only environment | 6 models × 10 queries × benchmark_cases_v3.json
+> AORUS MASTER 16 RAG — CPU & Colab environment | 6 models × 10 queries
 
 ---
 
@@ -8,11 +8,11 @@
 
 | Item | Details |
 |------|---------|
-| Inference Device | CPU only (no GPU data available) |
-| Inference Engine | llama.cpp (Python binding) |
+| Inference Device | CPU |
+| Inference Engine | llama.cpp |
 | Embedding Model | paraphrase-multilingual-MiniLM-L12-v2 |
-| Chunk Version | chunks_v4_bilingual.json (ZH + EN bilingual) |
-| Test Cases | benchmark_cases_v3.json (10 queries) |
+| Chunk Version | chunks.json (ZH + EN bilingual) |
+| Test Cases | benchmark_cases.json (10 queries) |
 | Metrics | Keyword Hit Rate / TTFT / TPS / RAM Peak |
 
 ---

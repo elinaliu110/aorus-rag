@@ -17,7 +17,7 @@ A **RAG system** for answering GIGABYTE AORUS MASTER 16 AM6H product specificati
 
 ```
 aorus-rag/
-├── README.md                      # 
+├── README.md                      
 ├── pyproject.toml                 # uv environment & dependencies
 ├── .gitignore
 │
@@ -26,7 +26,7 @@ aorus-rag/
 │   ├── vector_index.py            # Embedding index + exact key lookup
 │   ├── retrieval_generate.py      # Filter extraction, retrieval, streaming LLM
 │   ├── benchmark.py               # Quantitative evaluation (Hit Rate / TTFT / TPS)
-│   └── chat.py                # Interactive Q&A entry point
+│   └── chat.py                    # Interactive Q&A entry point
 │
 ├── data/
 │   ├── specs.csv                  # Raw AORUS MASTER 16 specification sheet
