@@ -7,7 +7,7 @@ Designed for consumer-grade laptops with ≤ 4 GB VRAM, with no dependency on La
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Bilingual queries** — Traditional Chinese × English mixed input supported
 - **Pure Python RAG** — No LangChain / LlamaIndex; custom Chunking, Retrieval, Generation
@@ -18,7 +18,7 @@ Designed for consumer-grade laptops with ≤ 4 GB VRAM, with no dependency on La
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 aorus-rag/
@@ -56,7 +56,7 @@ aorus-rag/
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.11+
@@ -123,7 +123,7 @@ uv run python src/benchmark.py \
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ```
 User Query (ZH / EN / Mixed)
@@ -172,7 +172,7 @@ This resolves cross-lingual retrieval failures where English queries could not m
 
 ---
 
-## 📊 Model Benchmark Summary (CPU-only)
+## Model Benchmark Summary (CPU)
 
 All tests run on CPU. GPU results would reduce TTFT to ~5–15 s range.
 
@@ -191,7 +191,7 @@ All tests run on CPU. GPU results would reduce TTFT to ~5–15 s range.
 
 ---
 
-## 🔧 Model Selection Rationale (4 GB Constraint)
+## Model Selection Rationale (4 GB Constraint)
 
 | Scenario | Model | Reason |
 |----------|-------|--------|
@@ -202,7 +202,7 @@ All tests run on CPU. GPU results would reduce TTFT to ~5–15 s range.
 
 ---
 
-## 📦 Dependencies
+## Dependencies
 
 | Package | Purpose |
 |---------|---------|
