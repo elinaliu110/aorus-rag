@@ -1,0 +1,261 @@
+{
+  "summary": {
+    "model_name": "Phi-4-mini-instruct-Q5_K_M",
+    "device": "CPU",
+    "avg_hit_rate": 0.69,
+    "avg_ttft_ms": 163268.8,
+    "avg_tps": 1.89
+  },
+  "cases": [
+    {
+      "id": 1,
+      "query": "AORUS MASTER 16 支援哪些作業系統？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 支援的作業系統為 Windows 11 Pro (GIGABYTE recommends for business)、Windows 11 Home、UEFI Shell OS。",
+      "expected_kw": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_keywords": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 209482.6,
+      "tps": 1.98,
+      "total_tokens": 37,
+      "total_ms": 228172.4,
+      "ram_delta_mb": 67.4,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 96.9,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 2,
+      "query": "BYH 的顯示記憶體是什麼類型？有多少 GB?AI Boost 頻率是多少？",
+      "query_type": "single_product",
+      "answer": "顯示記憶體是 GDDR7，16GB AI Boost 頻率為 1902MHz。",
+      "expected_kw": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_keywords": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 34771.6,
+      "tps": 1.93,
+      "total_tokens": 22,
+      "total_ms": 46150.5,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 89.8,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 3,
+      "query": "這台筆電最大支援多少 RAM？記憶體規格為何？",
+      "query_type": "shared_spec",
+      "answer": "這台筆電最大支援 64GB RAM，記憶體規格為 DDR5。",
+      "expected_kw": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_keywords": [
+        "64GB",
+        "DDR5"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 156852.6,
+      "tps": 1.74,
+      "total_tokens": 21,
+      "total_ms": 168910.0,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 97.7,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 4,
+      "query": "AORUS MASTER 16 有幾個 Thunderbolt 接口？分別在哪一側？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 有兩個 Thunderbolt 接口。第一個是 Type-C side，具體為 Support USB4, DisplayPort™ 2.1 and Power Delivery 3.0；第二个是在 A/B switchable Side，为支持USB4、DisplayPorts™, 和PowerDelivery的Thunderbolt®5接口。\n\n",
+      "expected_kw": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_keywords": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 186964.3,
+      "tps": 1.89,
+      "total_tokens": 69,
+      "total_ms": 223429.6,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 94.5,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 5,
+      "query": "BZH 和 BXH 的 GPU 功耗（TDP）一樣嗎？差異在哪裡？",
+      "query_type": "gpu_comparison",
+      "answer": "BZH 和 BXH 的 GPU 功耗（TDP）不同。 BZH 具有 TPD 为175W，而BXH的GPU功率为140w。因此，主要差異在於GXZ和BXH GPUs所需電源供應量上有所區別，其中 GXHZ demanding more power supply compared to XBH.",
+      "expected_kw": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_keywords": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 168411.4,
+      "tps": 1.88,
+      "total_tokens": 70,
+      "total_ms": 205700.6,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 94.1,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 6,
+      "query": "What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "According to the provided specifications, there is no detailed information about audio and webcam specs for AORUS MASTER 16 BZH/BXH/AY models. The data only includes details on keyboard type (3-zone RGB Backlit Keyboard with up-to-1.7mm key-travel supporting N-Key rollover) but does not mention anything regarding the onboard sound card or any integrated camera features that may be present in these laptops.\n\nFor accurate audio and webcam specifications, you would need to refer directly from GIGABYTE's official documentation for AORUS MASTER 16 series models BZH/BXH/AY.",
+      "expected_kw": [
+        "RGB",
+        "N-Key",
+        "Dolby Atmos",
+        "1080p",
+        "Windows Hello"
+      ],
+      "hit_keywords": [
+        "RGB",
+        "N-Key"
+      ],
+      "hit_rate": 0.4,
+      "ttft_ms": 163656.5,
+      "tps": 1.77,
+      "total_tokens": 124,
+      "total_ms": 233677.7,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 90.2,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 7,
+      "query": "What is the display panel type and refresh rate of AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The display panel type of AORUS MASTER 16 is OLED, and the refresh rate varies depending on whether it refers to BZH (240Hz), BYH or BXH.",
+      "expected_kw": [
+        "OLED",
+        "240Hz",
+        "2560",
+        "1600"
+      ],
+      "hit_keywords": [
+        "OLED",
+        "240Hz"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 209834.7,
+      "tps": 1.94,
+      "total_tokens": 37,
+      "total_ms": 228886.5,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 96.9,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 8,
+      "query": "What is the battery capacity of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The battery capacity of the AORUS MASTER 16 is Li Polymer with a total energy content (Wh) ranging from approximately [99] Wh for models BZH, BYH and BXH.",
+      "expected_kw": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_keywords": [
+        "Li Polymer"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 124637.5,
+      "tps": 2.0,
+      "total_tokens": 40,
+      "total_ms": 144654.3,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.3,
+      "cpu_avg_pct": 94.8,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 9,
+      "query": "What storage options are available on the BXH model?",
+      "query_type": "single_product",
+      "answer": "The BXH model offers the following storage options: 1x PCIe Gen5 M.2 slot, up to four slots for NVMe™ SSDs with a capacity of Up To Four Terabytes (TB), and each can support speeds provided by USB4 connectivity through Thunderbolt™, as well as DisplayPort® at version two point one or Power Delivery three zero via the Type-C connector supporting both SuperSpeed+ data transfer rates.",
+      "expected_kw": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_keywords": [
+        "PCIe",
+        "Gen5 M.2"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 208772.1,
+      "tps": 1.85,
+      "total_tokens": 88,
+      "total_ms": 256241.3,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4624.7,
+      "cpu_avg_pct": 94.0,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 10,
+      "query": "Which model should I choose between BYH and BXH for gaming? What are the GPU differences?",
+      "query_type": "gpu_comparison",
+      "answer": "If you are looking for a gaming laptop and considering between BYH (AORUS MASTER 16 BZH) with the RTX™ 5080 Laptop GPU, which has an AI Boost frequency of up to ±200MHz over its base clock speed plus OC boost features; versus BXH model equipped by Aorusu Master Series featuring RTX®50700 Ti laptop graphics card that offers a slightly lower VRAM capacity at just about half compared with the RTX™ 5080 Laptop GPU, you should choose BYH for gaming.\n\nThe main differences between these two GPUs are:\n\n- The BZH (RTX ™5090) has an AI Boost frequency of up to ±200MHz over its base clock speed plus OC boost features.\n  \nHowever since we don't have any information about the RTX™ 50700 Ti Laptop GPU's performance, it's difficult for me as a GPT model not able access real-time data or databases beyond my training cut-off in September this year. I recommend checking out latest benchmarks",
+      "expected_kw": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_keywords": [
+        "5080",
+        "5070"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 169304.2,
+      "tps": 1.91,
+      "total_tokens": 200,
+      "total_ms": 273994.9,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 4623.7,
+      "cpu_avg_pct": 86.8,
+      "cpu_max_pct": 100.0
+    }
+  ]
+}

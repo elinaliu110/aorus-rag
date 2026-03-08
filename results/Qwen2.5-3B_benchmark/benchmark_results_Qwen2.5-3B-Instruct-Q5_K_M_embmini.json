@@ -1,0 +1,264 @@
+{
+  "summary": {
+    "model_name": "Qwen2.5-3B-Instruct-Q5_K_M",
+    "device": "CPU",
+    "avg_hit_rate": 0.825,
+    "avg_ttft_ms": 145409.2,
+    "avg_tps": 2.18
+  },
+  "cases": [
+    {
+      "id": 1,
+      "query": "AORUS MASTER 16 支援哪些作業系統？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 支援的作業系統為 Windows 11 Pro (GIGABYTE recommends Windows 11 Pro for business.)、Windows 11 Home及UEFI Shell OS。 |end|>\n",
+      "expected_kw": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_keywords": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 180850.4,
+      "tps": 2.06,
+      "total_tokens": 49,
+      "total_ms": 204679.4,
+      "ram_delta_mb": 79.6,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 96.2,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 2,
+      "query": "BYH 的顯示記憶體是什麼類型？有多少 GB?AI Boost 頻率是多少？",
+      "query_type": "single_product",
+      "answer": "BYH 的顯示記憶體是 GDDR7，有 16GB。AI Boost 頻率為 1902MHz。|繁体中文|\nBYH 显示内存类型为GDDR7,共有16GB. AIBoost频率为1902 MHz.|英文|",
+      "expected_kw": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_keywords": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 30016.8,
+      "tps": 2.3,
+      "total_tokens": 62,
+      "total_ms": 57002.8,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 83.9,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 3,
+      "query": "這台筆電最大支援多少 RAM？記憶體規格為何？",
+      "query_type": "shared_spec",
+      "answer": "這台筆電最大支援 64GB DDR5，規格為 5600MHz。記憶體的最大容量和頻率會根據搭載的 GPU 而有所不同，在 BZH 模型中使用的是 RTX™ 5090 Laptop GPU 和 24 GB VRAM 的配置。|end|}\n",
+      "expected_kw": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_keywords": [
+        "64GB",
+        "DDR5",
+        "5600"
+      ],
+      "hit_rate": 0.75,
+      "ttft_ms": 138383.2,
+      "tps": 2.18,
+      "total_tokens": 70,
+      "total_ms": 170519.6,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 93.0,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 4,
+      "query": "AORUS MASTER 16 有幾個 Thunderbolt 接口？分別在哪一側？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 無 Thunderbolt 接口，所有提供的接口都是 USB-C。資料中提到的Thunderbolt™5 和 Thunderbolt™4 都是 Type-C 型號，但並未明確指出其為 Thunderbolt 版本。\n\n因此無法確定 AORUS MASTER 16 具有幾個 Thunderbolt 接口以及在哪一側。\n|<system>|\n根據提供的規格資料來分析問題：\n- 資料中提到的接口包括 Type-C with Thunderbolt™5 和 Type-A support USB3.2 Gen2，但沒有明確指出其為Thunderbolt 版本。因此可以推測這些可能是USB4或DisplayPort 2.1/1.4等類型。\n- 同樣地，Type-C with Thunderbolt™4 被標記為支持 DisplayPort™ 1.4 和 Power Delivery 3.0。\n\n綜合上述信息：\n",
+      "expected_kw": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_keywords": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 157130.4,
+      "tps": 2.15,
+      "total_tokens": 186,
+      "total_ms": 243624.4,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 87.9,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 5,
+      "query": "BZH 和 BXH 的 GPU 功耗（TDP）一樣嗎？差異在哪裡？",
+      "query_type": "gpu_comparison",
+      "answer": "BZH 和 BXH 的 GPU 功耗（TDP）不一樣。BZH 搭載的 RTX™ 5090 Laptop GPU 最大圖形功耗為175W，而BXH 擁有的 RTX™ 5070 Ti Laptop GPU最大圖形功耗則是140W。|end|",
+      "expected_kw": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_keywords": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 152183.6,
+      "tps": 2.16,
+      "total_tokens": 74,
+      "total_ms": 186396.5,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 94.1,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 6,
+      "query": "What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "根據提供的規格資料，AORUS MASTER 16 的鍵盤、音訊和網際網路攝影機（Webcam）的詳細資訊並未列出。因此無法提供這些特定功能的細節描述。\nAccording to the provided specifications, detailed information about the keyboard, audio and webcam of AORUS MASTER 16 is not listed. Therefore, I cannot provide specific details for these particular functions.\n\n資料中提到的是 GPU 的規格，以及不同機型之間在 GPU 方面的不同。但對於鍵盤類型、音訊和網路攝影機能力的詳細資訊並未提及。\nThe information provided in the data is about the specifications of the graphics processing unit (GPU) and differences between different models. However, there are no details mentioned regarding keyboard type, audio capabilities or network camera functionality.\n|end|",
+      "expected_kw": [
+        "RGB",
+        "N-Key",
+        "Dolby Atmos",
+        "1080p",
+        "Windows Hello"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 142783.9,
+      "tps": 2.16,
+      "total_tokens": 174,
+      "total_ms": 223357.9,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 88.8,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 7,
+      "query": "What is the display panel type and refresh rate of AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The display panel type of AORUS MASTER 16 is OLED, and the refresh rate is 240Hz. ",
+      "expected_kw": [
+        "OLED",
+        "240Hz",
+        "2560",
+        "1600"
+      ],
+      "hit_keywords": [
+        "OLED",
+        "240Hz"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 209988.2,
+      "tps": 2.11,
+      "total_tokens": 27,
+      "total_ms": 222797.0,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 98.0,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 8,
+      "query": "What is the battery capacity of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 的電池容量為 Li Polymer 99Wh。|end-user|",
+      "expected_kw": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_keywords": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 113546.0,
+      "tps": 2.22,
+      "total_tokens": 23,
+      "total_ms": 123919.3,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3505.6,
+      "cpu_avg_pct": 97.4,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 9,
+      "query": "What storage options are available on the BXH model?",
+      "query_type": "single_product",
+      "answer": "The BXH model of AORUS MASTER 16 offers up to a single PCIe Gen5 M.2 slot and two PCIe Gen4x4 M.2 slots for storage, with the capacity reaching up to 4TB via PCI Express Non-Volatile Memory Express (PCIe NVMe) SSDs. ",
+      "expected_kw": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_keywords": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 171367.0,
+      "tps": 2.25,
+      "total_tokens": 65,
+      "total_ms": 200232.2,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3592.6,
+      "cpu_avg_pct": 95.0,
+      "cpu_max_pct": 100.0
+    },
+    {
+      "id": 10,
+      "query": "Which model should I choose between BYH and BXH for gaming? What are the GPU differences?",
+      "query_type": "gpu_comparison",
+      "answer": "建議選擇 BYH 模型進行遊戲。BYH 和 BXH 的主要差異在於 GPU，其中：\n\n- **BYH**：搭載 RTX™ 5080 Laptop GPU、16GB GDDR7 显存和最大圖形功耗為 175W。\n  \n- **BXH**：則是搭配了更小容量的顯示卡 - 適合中階需求，其配置包括 RTX™ 5070 Ti Laptop GPU 和 12GB 的 GDDR7 显存。\n\n由於 BYH 模型搭載的是效能較高的 NVIDIA GeForce RTX™ 5080 設備（與 BZH 相比），因此在遊戲性能上會更勝一籌。BXH 為入門級選項，適合預算有限但仍有中等需求的玩家使用。\n\n總之，在考慮到效能和預算是選擇 BYH",
+      "expected_kw": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_keywords": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 157842.7,
+      "tps": 2.23,
+      "total_tokens": 189,
+      "total_ms": 242767.2,
+      "ram_delta_mb": 0.0,
+      "ram_peak_mb": 3592.6,
+      "cpu_avg_pct": 87.8,
+      "cpu_max_pct": 100.0
+    }
+  ]
+}
