@@ -1,0 +1,41 @@
+[
+  {
+    "model_name": "casperhansen/llama-3.2-1b-instruct-awq",
+    "device": "GPU",
+    "avg_hit_rate": 0.4033,
+    "avg_ttft_ms": 132.3,
+    "avg_tps": 56.57,
+    "vram_model_mb": 3398,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 3965,
+    "status": "OK"
+  },
+  {
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct-AWQ",
+    "device": "GPU",
+    "avg_hit_rate": 0.5367,
+    "avg_ttft_ms": 201.8,
+    "avg_tps": 36.52,
+    "vram_model_mb": 3462,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 4029,
+    "status": "OK"
+  },
+  {
+    "model_name": "AMead10/Llama-3.2-1B-Instruct-AWQ",
+    "device": "GPU",
+    "avg_hit_rate": 0.32,
+    "avg_ttft_ms": 132.8,
+    "avg_tps": 57.41,
+    "vram_model_mb": 3446,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 4013,
+    "status": "OK"
+  }
+]

@@ -63,6 +63,13 @@ git clone https://github.com/elinaliu110/RAG-AORUS.git
 cd aorus-rag
 uv sync
 ```
+####
+### Cell 1：安裝
+```bash
+!pip install vllm huggingface_hub
+from huggingface_hub import notebook_login
+notebook_login()
+```
 
 ### 2. Download a Model
 
@@ -98,6 +105,20 @@ uv run python src/chat.py \
     --emb    data/embeddings.npy
 ```
 
+
+### 4. Interactive Q&A vllm
+
+```bash
+uv run python src/chat.py \
+    --model AMead10/Llama-3.2-3B-Instruct-AWQ \
+    --gpu-util 0.189 \
+    --max-model-len 1024 \
+    --enforce-eager \
+    --chunks data/chunks.json \
+    --emb data/embeddings.npy
+
+```
+
 **Example queries:**
 ```
 >>> AORUS MASTER 16 支援哪些作業系統？
@@ -113,6 +134,21 @@ uv run python src/benchmark.py \
     --emb    data/embeddings.npy \
     --cases  data/benchmark_cases.json \
     --out    results/benchmark_results_Llama-Q5.json
+```
+
+
+### 5. Run Benchmark vllm
+
+```bash
+uv run python src/benchmark_vllm.py \
+    --chunks data/chunks.json \
+    --emb data/embeddings.npy \
+    --cases data/benchmark_cases.json \
+    --models casperhansen/llama-3.2-1b-instruct-awq,Qwen/Qwen2.5-1.5B-Instruct-AWQ,AMead10/Llama-3.2-1B-Instruct-AWQ \
+    --gpu-util 0.187 \
+    --max-model-len 1024 \
+    --enforce-eager \
+    --out-dir results_4gb
 ```
 
 ---

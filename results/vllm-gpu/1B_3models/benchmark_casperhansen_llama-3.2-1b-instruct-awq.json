@@ -1,0 +1,234 @@
+{
+  "summary": {
+    "model_name": "casperhansen/llama-3.2-1b-instruct-awq",
+    "device": "GPU",
+    "avg_hit_rate": 0.4033,
+    "avg_ttft_ms": 132.3,
+    "avg_tps": 56.57,
+    "vram_model_mb": 3398,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 3965
+  },
+  "cases": [
+    {
+      "id": 1,
+      "query": "AORUS MASTER 16 支援哪些作業系統？",
+      "query_type": "shared_spec",
+      "answer": "根據提供的 Specification Data，AORUS MASTER 16 支持以下作業系統：\n\n1. Windows 11 Pro（GIGABYTE建議使用這個作業系統）\n2. Windows 11 Home\n3. UEFI Shell OS \n\n因此，這三種作業系統都可以用於AORUS MASTER 16。",
+      "expected_kw": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_keywords": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 204.1,
+      "tps": 64.24,
+      "total_tokens": 69,
+      "total_ms": 1278.2,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 2,
+      "query": "BYH 的顯示記憶體是什麼類型？有多少 GB?AI Boost 頻率是多少？",
+      "query_type": "single_product",
+      "answer": "BYH的顯示器是一種GDDR7顯示卡。由於這個問題沒有提供明確答案，我們無法確認顯示記憶體數量和AI Boost頻率。\n\n但是，如果您需要了解更多資訊，您可以根據原文來知道：顯示卡名為RTX 5080 Laptop GPU、顯示記憶體 16GB GDDR7、TDP 175W 和 AI Boost frequency 是 1804 MHz（不過在此問題中未提及 boost frequency）或OC 2208 MHZ。",
+      "expected_kw": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_keywords": [
+        "GDDR7",
+        "16"
+      ],
+      "hit_rate": 0.6666666666666666,
+      "ttft_ms": 192.6,
+      "tps": 46.13,
+      "total_tokens": 114,
+      "total_ms": 2663.8,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 3,
+      "query": "這台筆電最大支援多少 RAM？記憶體規格為何？",
+      "query_type": "shared_spec",
+      "answer": "這台笔电支持的RAM是DDR5，最高可達56 GHz（每秒五千毫米）。",
+      "expected_kw": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_keywords": [
+        "DDR5"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 216.5,
+      "tps": 41.74,
+      "total_tokens": 19,
+      "total_ms": 671.7,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 4,
+      "query": "AORUS MASTER 16 有幾個 Thunderbolt 接口？分別在哪一側？",
+      "query_type": "shared_spec",
+      "answer": "根據 Specification Data，AORUS MASTER 16 BZh 允許以下三種Thunderbolt接口：\n\n* 左侧（Left Side）：有兩條Type C Thunderbolt 5接口。\n* 右 sideside：有一條Micro SD UHS II的USB 3.2 gen 2端口。\n\n因此，這些是這台機器上的Thunderbolt接口。",
+      "expected_kw": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_keywords": [
+        "Thunderbolt",
+        "5"
+      ],
+      "hit_rate": 0.6666666666666666,
+      "ttft_ms": 126.9,
+      "tps": 54.08,
+      "total_tokens": 79,
+      "total_ms": 1587.8,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 5,
+      "query": "BZH 和 BXH 的 GPU 功耗（TDP）一樣嗎？差異在哪裡？",
+      "query_type": "gpu_comparison",
+      "answer": "不正確。BHZ和BXH的GPU TDP是不同的。\n\n*   AORUS MASTER 16 BHZ：TDP 180W\n*   AORUS MASTER 16 BXH：TDP 160W \n\n這兩個顯示卡都具有相同的最大图像功耗，但不同於其它特徵。",
+      "expected_kw": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_keywords": [
+        "BXH"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 193.3,
+      "tps": 61.02,
+      "total_tokens": 67,
+      "total_ms": 1291.3,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 6,
+      "query": "What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "I can provide you with information about these components:\n\n- **Keyboard**: \n   - Type: 3-zone RGB Backlit Keyboard\n   - Maximum key travel distance up to 1.7 mm.\n\nPlease note that I am unable to verify what specific brands or models may be used within this product line as they have been released by Gigabyte after my cut-off date. \n\nFor more accurate answers regarding your query please refer back to our conversation's starting point which was before March 8th, 2024 when we started discussing gigabytes products' technical details including keyboards, sound cards & webcams etc..",
+      "expected_kw": [
+        "RGB",
+        "N-Key",
+        "Dolby Atmos",
+        "1080p",
+        "Windows Hello"
+      ],
+      "hit_keywords": [
+        "RGB"
+      ],
+      "hit_rate": 0.2,
+      "ttft_ms": 81.7,
+      "tps": 63.75,
+      "total_tokens": 122,
+      "total_ms": 1995.5,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 7,
+      "query": "What is the display panel type and refresh rate of AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The display panel type of AORUS MASTER 16 is:\n\n* Type: OLED (Organic Light-Emitting Diode)\n* Panel size: 16\"\n\nAs per the specification, \n\nDisplay Specification \nPanel Size : 16\"\nRefresh Rate : 60 Hz",
+      "expected_kw": [
+        "OLED",
+        "240Hz",
+        "2560",
+        "1600"
+      ],
+      "hit_keywords": [
+        "OLED"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 65.2,
+      "tps": 62.78,
+      "total_tokens": 55,
+      "total_ms": 941.2,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 8,
+      "query": "What is the battery capacity of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The correct spelling seems to be \"BYH\" instead of \"BHZ\". Based on this information:\n\n* The battery type and model name have been correctly identified as AORUS MASTER 16 (I assume it's meant to stand for AORUS Master).\n \nSince I do not see any mention that specifies what kind or brand of batteries these models use, let me try again with some general knowledge about lithium polymer batteries which seem like common usage here \n\nAssuming standard conditions where voltage = nominal value + tolerance - typical values can vary depending upon many factors including temperature etc., we know from given specs,\nBattery Capacity = Nominal Value + Tolerance  \n=   98V ±10%  \n\nSo Battery Capacity ≈ 97-108 V",
+      "expected_kw": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 59.3,
+      "tps": 63.5,
+      "total_tokens": 150,
+      "total_ms": 2421.5,
+      "vram_used_mb": 3967,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 9,
+      "query": "What storage options are available on the BXH model?",
+      "query_type": "single_product",
+      "answer": "According to the Specification Data:\n\n* Available Storage Options: \n    + 1 x PCIe Gen5 M.2 Slot (for storing additional components)\n    + 1 x PCIe Gen4x4 M.2 Slots (up to 8 TB of capacity)\n\nThese two types of M.2 slots can be used together or separately depending on your needs and motherboard compatibility. \n\nPlease note that I do not have information about any other features such as USB ports, power delivery support etc., which might also affect what type(s) of hardware you could use within this particular board design.",
+      "expected_kw": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_keywords": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2"
+      ],
+      "hit_rate": 0.75,
+      "ttft_ms": 80.1,
+      "tps": 61.17,
+      "total_tokens": 117,
+      "total_ms": 1992.8,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3398
+    },
+    {
+      "id": 10,
+      "query": "Which model should I choose between BYH and BXH for gaming? What are the GPU differences?",
+      "query_type": "gpu_comparison",
+      "answer": "I can provide you with information about both models.\n\nThe main difference between AORUS MASTER 16 BYH and AORUS MASTER 16 BXH lies in their cooling systems:\n\n- AORUS MASTER 16 BYH uses dual fans to cool its CPU while also using an additional fan from Intel's Core i9 series processor family which provides better airflow than standard case fans used by most motherboards at this time of writing \n- AORUS MASTER 16 BXH does use two fans but only one more efficient air flow system that utilizes heat pipes instead \n\nIn terms of performance, there isn't much variation as they have similar specs including maximum power consumption per unit being around same or slightly higher depending upon how it was calculated . Both GPUs support up to DirectX version 11 graphics API level 1x/level 4.x/x and OpenGL AR mode. They do share some features such as NVIDIA GeForce Turing ray tracing technology, Variable Rate Shading, MultiFrame Prediction etc., however these",
+      "expected_kw": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 103.1,
+      "tps": 47.25,
+      "total_tokens": 198,
+      "total_ms": 4293.2,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3398
+    }
+  ]
+}

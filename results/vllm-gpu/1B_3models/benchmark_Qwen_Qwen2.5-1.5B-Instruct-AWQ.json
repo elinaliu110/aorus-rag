@@ -1,0 +1,239 @@
+{
+  "summary": {
+    "model_name": "Qwen/Qwen2.5-1.5B-Instruct-AWQ",
+    "device": "GPU",
+    "avg_hit_rate": 0.5367,
+    "avg_ttft_ms": 201.8,
+    "avg_tps": 36.52,
+    "vram_model_mb": 3462,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 4029
+  },
+  "cases": [
+    {
+      "id": 1,
+      "query": "AORUS MASTER 16 支援哪些作業系統？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 支援以下操作系统：\n\n- **Windows 11 Pro**（建议用于商业用途）\n- **Windows 11 Home**\n- UEFI Shell OS\n\n请注意，这些信息基于提供的数据，并且没有提及任何特定型号或版本的区别。因此，在选择适合您的设备时，请确保检查最新的产品文档和用户指南以获取最准确的信息。",
+      "expected_kw": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_keywords": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 434.3,
+      "tps": 30.65,
+      "total_tokens": 78,
+      "total_ms": 2979.0,
+      "vram_used_mb": 4031,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 2,
+      "query": "BYH 的顯示記憶體是什麼類型？有多少 GB?AI Boost 頻率是多少？",
+      "query_type": "single_product",
+      "answer": "BYH的顯示記憶體是一種GDDR7。有16GB。\n\nAI Boost頻率是1902 MHz。",
+      "expected_kw": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_keywords": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 259.5,
+      "tps": 40.9,
+      "total_tokens": 23,
+      "total_ms": 821.9,
+      "vram_used_mb": 4031,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 3,
+      "query": "這台筆電最大支援多少 RAM？記憶體規格為何？",
+      "query_type": "shared_spec",
+      "answer": "這台筆電的最大RAM容量是達至64GB，並且使用的是DDR5的頻率設定在5600 MHz。\n\n關於記憶體規格：\n- 系統支持最高可配備到64 GB DDR5 5600 MHz。\n- 使用了兩個SO-DIMM插槽來提供這個最大的記憶體配置能力。",
+      "expected_kw": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_keywords": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 197.6,
+      "tps": 38.74,
+      "total_tokens": 74,
+      "total_ms": 2107.6,
+      "vram_used_mb": 4031,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 4,
+      "query": "AORUS MASTER 16 有幾個 Thunderbolt 接口？分別在哪一側？",
+      "query_type": "shared_spec",
+      "answer": "雷電接口的數量是兩個，一個在左側（Type-A支持USB3.2Gen2），另一個在右側（Thunderbolt4）。",
+      "expected_kw": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_keywords": [
+        "Thunderbolt",
+        "4"
+      ],
+      "hit_rate": 0.6666666666666666,
+      "ttft_ms": 256.2,
+      "tps": 39.69,
+      "total_tokens": 28,
+      "total_ms": 961.7,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 5,
+      "query": "BZH 和 BXH 的 GPU 功耗（TDP）一樣嗎？差異在哪裡？",
+      "query_type": "gpu_comparison",
+      "answer": "BZH和BXH的GPU功耗(TDP)是一樣的。兩者的數據都是175瓦特。\n\n然而，在其他方面有以下不同：\n\n- BZh使用的是RTX™ 5090 Laptop GPU，\n而BXh 使用的是RTX™ 5070Ti Laptop GPU。\n這意味著在核心數量、顯存大小以及最高功率消耗上有所區別：\n  \n- 在核心數量：Bzh是單一核心，而bxh則雙核；\n- 显存容量：Bzh用GDDR7显存，而bxh则换成了更小尺寸的GDDR7；\n\n這些細節都影響了性能表現和其他特性功能。因此雖然功耗相同但其它參數有所不同。",
+      "expected_kw": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_keywords": [
+        "BZH",
+        "BXH"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 226.5,
+      "tps": 38.42,
+      "total_tokens": 155,
+      "total_ms": 4260.9,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 6,
+      "query": "What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "键盘类型：3-zone RGB Backlit Keyboard，Up to 1.7mm Keytravel（支持N键）\n音频规格未提供。\n摄像头规格未提供。\n\n请注意，在提供的数据中没有关于耳机或麦克风的详细信息。这些设备的具体功能和配置可能需要进一步查询以获得准确答案。如果您有其他问题，请随时提问！",
+      "expected_kw": [
+        "RGB",
+        "N-Key",
+        "Dolby Atmos",
+        "1080p",
+        "Windows Hello"
+      ],
+      "hit_keywords": [
+        "RGB"
+      ],
+      "hit_rate": 0.2,
+      "ttft_ms": 178.6,
+      "tps": 31.02,
+      "total_tokens": 69,
+      "total_ms": 2403.3,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 7,
+      "query": "What is the display panel type and refresh rate of AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The display panel used by AORUS Master 16 has an aspect ratio of **16**:**10**, it's made up with *OLED* technology which provides high contrast ratios compared to other technologies like LCD or LED panels. The resolution supported here includes both standard resolutions as well as ultra-high definition ones - specifically this model supports displays at size **WQXGA**(Wide Quad Xga Resolution). \n\nFor its performance characteristics:\n\nIt offers a maximum frame-rate that can be achieved without any visual artifacts being visible called \"G-sync\", set at **240 Hz**\n\nAdditionally, there’s support from Nvidia through their GeForce series graphics cards via 'NVIDIA g-sync' feature allowing smooth gaming experience across multiple monitors connected together using HDMI ports\n\nFinally, we have some additional features such as \n• High brightness levels reaching peak luminance values around **500 nits**\n• Support for advanced optimisation techniques including ‘Advanced Optimus’ ensuring optimal power consumption while",
+      "expected_kw": [
+        "OLED",
+        "240Hz",
+        "2560",
+        "1600"
+      ],
+      "hit_keywords": [
+        "OLED"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 139.9,
+      "tps": 35.73,
+      "total_tokens": 199,
+      "total_ms": 5708.7,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 8,
+      "query": "What is the battery capacity of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The battery capacity of all three models - Master 16 BZh (Master 16), Master 16 Byh and Master 16 Bxh respectively - is **Li polymer** with an *output* voltage between `30V` to `48 V`, depending upon model variant (`Bzh`,`Byh` or `Bhx`). The total output power varies from approximately `25W` up to about `75 W`. This means that each unit can provide anywhere from around half-a-watt per hour down through several watts-per-hour at its maximum rated speed range when fully charged. \n\nNote however this does vary slightly across different variants within these categories as well due to slight differences in design specifics but generally speaking they fall into those ranges stated above. For precise details you would need specific product information which may be available online directly by clicking links given here under \"Product Information\" section below where it's recommended one should look further detail such like price etc",
+      "expected_kw": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_keywords": [
+        "Li Polymer"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 88.5,
+      "tps": 38.77,
+      "total_tokens": 199,
+      "total_ms": 5221.1,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 9,
+      "query": "What storage options are available on the BXH model?",
+      "query_type": "single_product",
+      "answer": "The BXH model offers two types of storage:\n\n- One PCIe x GEN5 (PCIe Generation Five) M.2 Slot \n- Two PCIe x GEN4X4 (PCI Express Four Point Eight Speeds Compatible With The Same Bus as PCI-E X32 And Supports Both Legacy and Non-Legacy Devices)\n\nAdditionally it has support for maximum capacity upto four terabytes per device using SATA III or SAS II technology\n\nPlease note that this information pertains specifically to the \"BX\" variant which includes both models mentioned - Master 8BZ & Master 16 BZH respectively. For more detailed technical specs please refer directly at https://www.gigabyte.com/products/798#product-specifications . \n\nThis response was generated from only given text without any external knowledge base lookup. It's important to clarify there may be slight variations between different variants within same series depending upon specific hardware revisions used by Gigabyte.Gigabyte的資料僅提供給您參考之用，在",
+      "expected_kw": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_keywords": [
+        "PCIe"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 144.3,
+      "tps": 31.81,
+      "total_tokens": 197,
+      "total_ms": 6337.5,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    },
+    {
+      "id": 10,
+      "query": "Which model should I choose between BYH and BXH for gaming? What are the GPU differences?",
+      "query_type": "gpu_comparison",
+      "answer": "For choosing between AORUS Master 16 BYH or AXB H models when it comes to games:\n\n- **GPU Differences**:\n    - The difference lies primarily with their base GPUs used by each motherboard.\n\n      For example,\n        * Model \"BY\" uses an NVIDIA GeForce GTX 30 series graphics card which has been discontinued since its release date of June 2012;\n        * While this does mean that you won't be able to use any software from before then as your system will no longer support DirectX versions prior to version 11;\n\nThe other two options have different cards but they're both still supported up until now according to my research into current hardware compatibility lists available online at time of writing these answers.\n\n\nTherefore, while there's some minor technical information about older components involved here due to specific product details being outdated compared to modern standards,\n\nthe main point would likely come down more towards personal preference regarding newer technology vs legacy systems rather than direct performance comparison given how",
+      "expected_kw": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 92.8,
+      "tps": 39.48,
+      "total_tokens": 199,
+      "total_ms": 5133.6,
+      "vram_used_mb": 4033,
+      "vram_model_mb": 3462
+    }
+  ]
+}

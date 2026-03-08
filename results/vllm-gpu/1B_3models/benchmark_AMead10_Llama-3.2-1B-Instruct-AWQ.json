@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "model_name": "AMead10/Llama-3.2-1B-Instruct-AWQ",
+    "device": "GPU",
+    "avg_hit_rate": 0.32,
+    "avg_ttft_ms": 132.8,
+    "avg_tps": 57.41,
+    "vram_model_mb": 3446,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 4013
+  },
+  "cases": [
+    {
+      "id": 1,
+      "query": "AORUS MASTER 16 支援哪些作業系統？",
+      "query_type": "shared_spec",
+      "answer": "根據提供的 Specification Data，AORUS MASTER 16 支持以下作業系統：\n\n1. Windows 11 Pro（GIGABYTE建議使用這個作業系統）\n2. Windows 11 Home\n3. UEFI Shell OS \n\n因此，這三種作業系統都可以用於AORUS MASTER 16。",
+      "expected_kw": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_keywords": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 349.8,
+      "tps": 56.98,
+      "total_tokens": 69,
+      "total_ms": 1560.8,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 2,
+      "query": "BYH 的顯示記憶體是什麼類型？有多少 GB?AI Boost 頻率是多少？",
+      "query_type": "single_product",
+      "answer": "BYH的顯示器是一種GDDR7顯示卡。由於這個問題沒有提供明確答案，我們無法確認顯示記憶體數量和AI Boost頻率。\n\n但是，如果您需要了解它是否支持OC overclocking，您可以根據原文：\"TDP 175W\", \"max clock speed 1808 MHz\". 因此，這可能會被視為一項可行選擇，但未能夠得出正確結果，因為不清楚哪一個特徵值實際上代表了OC過程或不是。 \n\n因此我只能說明以下事實：\n\n* BYH的顯示器是GDDR7。\n* max clock speed 是 1,808 MHz，而 boost frequency 可以達到 2,008 MHz。但因為boost frequency 不一定等同于actual frequency，因此我們不能斷定那個是 true value。 \n * TDP 是 175 W。",
+      "expected_kw": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_keywords": [
+        "GDDR7"
+      ],
+      "hit_rate": 0.3333333333333333,
+      "ttft_ms": 156.1,
+      "tps": 62.23,
+      "total_tokens": 190,
+      "total_ms": 3209.3,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 3,
+      "query": "這台筆電最大支援多少 RAM？記憶體規格為何？",
+      "query_type": "shared_spec",
+      "answer": "這台笔电支持的RAM是DDR5，最高可達56 GHz（每秒五千毫米）。",
+      "expected_kw": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_keywords": [
+        "DDR5"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 158.2,
+      "tps": 68.12,
+      "total_tokens": 19,
+      "total_ms": 437.1,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 4,
+      "query": "AORUS MASTER 16 有幾個 Thunderbolt 接口？分別在哪一側？",
+      "query_type": "shared_spec",
+      "answer": "根據 Specification Data，AORUS MASTER 16 BZh 允許以下三種Thunderbolt接口：\n\n* 左侧（Left Side）：有兩條Type C Thunderbolt 5接口。\n* 右 sideside：有一條Micro SD UHS II的USB 3.2 gen 2端口。\n\n因此，這些是這台機器上的Thunderbolt接口。",
+      "expected_kw": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_keywords": [
+        "Thunderbolt",
+        "5"
+      ],
+      "hit_rate": 0.6666666666666666,
+      "ttft_ms": 82.9,
+      "tps": 44.84,
+      "total_tokens": 79,
+      "total_ms": 1844.6,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 5,
+      "query": "BZH 和 BXH 的 GPU 功耗（TDP）一樣嗎？差異在哪裡？",
+      "query_type": "gpu_comparison",
+      "answer": "不正確。BHZ和BXH的GPU TDP是不同的。\n\n*   AORUS MASTER 16 BHZ：TDP 180W\n*   AORUS MASTER 16 BXH：TDP 160W \n\n這兩個顯示卡都具有相同的最大图像功耗，但不同於其它特徵。",
+      "expected_kw": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_keywords": [
+        "BXH"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 213.9,
+      "tps": 41.85,
+      "total_tokens": 67,
+      "total_ms": 1814.7,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 6,
+      "query": "What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "I can provide you with information about these components:\n\n- **Keyboard**: \n   - Type: 3-zone RGB Backlit Keyboard\n   - Maximum key travel distance up to 1.7 mm.\n\nPlease note that I do not have any additional details or specific models mentioned within this dataset regarding other peripherals like Audio/Video capabilities etc., which might be required by some users who require more detailed info than what's available here. \n\nFor general inquiries related to hardware specifics such as sound quality, video output options, connectivity features, please let me know how else I may assist!",
+      "expected_kw": [
+        "RGB",
+        "N-Key",
+        "Dolby Atmos",
+        "1080p",
+        "Windows Hello"
+      ],
+      "hit_keywords": [
+        "RGB"
+      ],
+      "hit_rate": 0.2,
+      "ttft_ms": 95.4,
+      "tps": 62.27,
+      "total_tokens": 115,
+      "total_ms": 1942.2,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 7,
+      "query": "What is the display panel type and refresh rate of AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The display panel type of AORUS MASTER 16 is:\n\n* Type: OLED (Organic Light-Emitting Diode)\n* Refresh Rate: 60 Hz \n\nNote that I've answered both \"OLED\" as well as \"WQXGA\", since it's possible to have an OLED with different resolutions depending on how they're configured or optimized by manufacturers like ASUS. However, according to your original statement about resolution being at least QHD(3200x1800).",
+      "expected_kw": [
+        "OLED",
+        "240Hz",
+        "2560",
+        "1600"
+      ],
+      "hit_keywords": [
+        "OLED"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 63.3,
+      "tps": 63.59,
+      "total_tokens": 99,
+      "total_ms": 1620.1,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 8,
+      "query": "What is the battery capacity of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "The correct spelling seems to be \"BYH\" instead of \"BHZ\". Based on this information:\n\n* The battery type and brand mentioned earlier were incorrect (GIGABYTE), but I'll continue with what's available.\n \nSince we don't have any specific details about these batteries' capacities or other specs like voltage rating etc., it appears that there might be some missing info regarding their actual values which would allow us determine more accurately whether they match your expectations as per original query parameters stated at beginning.\n\n\n\nHowever since no such specifical value was given - let me provide you an example response assuming typical usage scenarios where power consumption may vary depending upon various factors including load conditions.\n\n\nAssuming average daily use scenario without heavy loads:\n\n\nAverage Daily Power Consumption = Average Usage Time x Total Energy Consumed\n\n\nLet’s assume our users will get around 8 hours/day using them normally\n\n\n\nPower consumed by one unit during normal operation=   [insert formula here]\n\n\n\n\nNow lets calculate total energy consumped",
+      "expected_kw": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 62.8,
+      "tps": 63.27,
+      "total_tokens": 199,
+      "total_ms": 3208.0,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 9,
+      "query": "What storage options are available on the BXH model?",
+      "query_type": "single_product",
+      "answer": "According to the Specification Data:\n\n* Available Storage Options: \n    + Up to 8 x PCI Express (PCIe) lanes can be used as one of two types of interfaces depending where they go - either using an Xeon Phi or Intel's I/O controller chip which has its own dedicated lane and uses it exclusively \n\nHowever since there isn't any mention about how many different type of interface that will support we cannot confirm what exactly kind of option you have access to but generally speaking most modern motherboards use at least some form of dual channel mode when multiple channels exist such as this motherboard does provide both Dual Channel Mode & Quad Channel Support via four PCHs supporting all three modes including single-channel performance while quadchannel provides higher bandwidth per channel than double channel due to having more power being diverted from other components like CPU cores etc..",
+      "expected_kw": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_keywords": [
+        "PCIe"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 58.3,
+      "tps": 63.67,
+      "total_tokens": 167,
+      "total_ms": 2681.1,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    },
+    {
+      "id": 10,
+      "query": "Which model should I choose between BYH and BXH for gaming? What are the GPU differences?",
+      "query_type": "gpu_comparison",
+      "answer": "I can provide you with information about both models.\n\nFor your consideration:\n\n- The main difference lies in their power consumption - Byh has an upper limit of 180 W while BXH's maximum is only at 135 W when running max settings under normal conditions.\n\n\nBased on this comparison:\n\n\nByh seems to be more powerful than BXH as it supports higher clock speeds up until its specified boost frequency which may allow better performance during intense usage periods such as playing games or video editing applications that require high processing speed like those used by graphics cards.\n\n\n\nHowever please note these comparisons assume optimal system configuration including sufficient RAM memory, adequate cooling systems etc., otherwise actual results might vary significantly depending upon individual hardware setup. \n\nPlease consult manufacturer recommendations before making any purchase decision.",
+      "expected_kw": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 87.7,
+      "tps": 47.28,
+      "total_tokens": 150,
+      "total_ms": 3260.1,
+      "vram_used_mb": 4015,
+      "vram_model_mb": 3446
+    }
+  ]
+}

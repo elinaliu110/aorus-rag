@@ -1,0 +1,242 @@
+{
+  "summary": {
+    "model_name": "Qwen/Qwen2.5-3B-Instruct-AWQ",
+    "device": "GPU",
+    "avg_hit_rate": 0.5817,
+    "avg_ttft_ms": 273.6,
+    "avg_tps": 30.98,
+    "vram_model_mb": 3468,
+    "within_4gb": true,
+    "gpu_name": "Tesla T4",
+    "vram_total_mb": 15360,
+    "vram_used_mb": 4035
+  },
+  "cases": [
+    {
+      "id": 1,
+      "query": "AORUS MASTER 16 支援哪些作業系統？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16支援以下作業系統：  \n- Windows 11 Pro（GIGABYTE建議使用於商業用途）\n- Windows 11 Home\n- UEFI Shell OS\n\n資料中未明確列出不同版本之間是否有差異，但根據提供的信息推測所有變體都支持相同的列表。因此可以總結說該款機器支援上述三種指定的操作系统。",
+      "expected_kw": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_keywords": [
+        "Windows 11 Pro",
+        "Windows 11 Home",
+        "UEFI Shell OS"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 372.2,
+      "tps": 33.14,
+      "total_tokens": 86,
+      "total_ms": 2967.4,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 2,
+      "query": "BYH 的顯示記憶體是什麼類型？有多少 GB?AI Boost 頻率是多少？",
+      "query_type": "single_product",
+      "answer": "BYH 的顯示記憶体的类型是GDDR7，有16GB。AI Boost頻率为1902 MHz。",
+      "expected_kw": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_keywords": [
+        "GDDR7",
+        "1902",
+        "16"
+      ],
+      "hit_rate": 1.0,
+      "ttft_ms": 248.8,
+      "tps": 33.81,
+      "total_tokens": 24,
+      "total_ms": 958.6,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 3,
+      "query": "這台筆電最大支援多少 RAM？記憶體規格為何？",
+      "query_type": "shared_spec",
+      "answer": "這台筆電的最大支援RAM量度是至多64GB，並使用DDR5的記憶体標準，槽數則為雙插槽数SO-DIMM。",
+      "expected_kw": [
+        "64GB",
+        "DDR5",
+        "5600",
+        "SO-DIMM"
+      ],
+      "hit_keywords": [
+        "64GB",
+        "DDR5",
+        "SO-DIMM"
+      ],
+      "hit_rate": 0.75,
+      "ttft_ms": 258.6,
+      "tps": 33.47,
+      "total_tokens": 33,
+      "total_ms": 1244.4,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 4,
+      "query": "AORUS MASTER 16 有幾個 Thunderbolt 接口？分別在哪一側？",
+      "query_type": "shared_spec",
+      "answer": "AORUS MASTER 16 具有两个Thunderbolt接口。\n\n其中，一個在Type-C插孔中（支持USB4和DisplayPort 2.1），位於機身的右侧；\n另一個也在型C插孔中（支援Power Delivery 3.0）同樣位于機身的右侧。因此可以說是同一個接口的不同功能設定或稱為雙向操作模式。所以正確的答案應該指出這兩個都是在同一邊即右側，但根據問題的要求描述兩者的位置時應詳細列出左右两侧都有的特性。\n簡潔回答如下：\nAORUS MASTER 16 無論哪一侧都有Thunderbolt接口，共計兩個，在右側各有一個。",
+      "expected_kw": [
+        "Thunderbolt",
+        "5",
+        "4"
+      ],
+      "hit_keywords": [
+        "Thunderbolt",
+        "4"
+      ],
+      "hit_rate": 0.6666666666666666,
+      "ttft_ms": 271.8,
+      "tps": 26.95,
+      "total_tokens": 143,
+      "total_ms": 5578.7,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 5,
+      "query": "BZH 和 BXH 的 GPU 功耗（TDP）一樣嗎？差異在哪裡？",
+      "query_type": "gpu_comparison",
+      "answer": "BZH 和 BXH 的 GPU 最大圖形功率（TDP）相同，都是 175W。\n\n兩者之間的主要區別在於：\n- 明細中提到的 \"RTX™ 5090\" 等級對應的是 BZH 型號。\n- 而 BXH 使用了較低階位數的 \"RTX™ 5070 Ti\"。",
+      "expected_kw": [
+        "175W",
+        "140W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_keywords": [
+        "175W",
+        "BZH",
+        "BXH"
+      ],
+      "hit_rate": 0.75,
+      "ttft_ms": 308.0,
+      "tps": 30.56,
+      "total_tokens": 80,
+      "total_ms": 2925.7,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 6,
+      "query": "What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "根據提供的規格數據，對於所有提到的機種（MASTER 16 BZH、BYH 和 BXH），其鍵盘类型均为三区RGB背光键盘，并且键程可達至約1.7毫米，支持N-key重疊功能。\n\n然而，在給定的信息中並未提及任何有關音效和攝像頭的功能或规格详情。因此，無法提供關於這些配件的具体信息。\n无法从给定数据中获取关于音频设备和摄像头的相关细节。",
+      "expected_kw": [
+        "RGB",
+        "N-Key",
+        "Dolby Atmos",
+        "1080p",
+        "Windows Hello"
+      ],
+      "hit_keywords": [
+        "RGB",
+        "N-Key"
+      ],
+      "hit_rate": 0.4,
+      "ttft_ms": 244.6,
+      "tps": 32.19,
+      "total_tokens": 100,
+      "total_ms": 3351.3,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 7,
+      "query": "What is the display panel type and refresh rate of AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "AORIS MASTER 16 使用的是 OLED 萤幕面板，刷新率是 240 Hz。",
+      "expected_kw": [
+        "OLED",
+        "240Hz",
+        "2560",
+        "1600"
+      ],
+      "hit_keywords": [
+        "OLED"
+      ],
+      "hit_rate": 0.25,
+      "ttft_ms": 198.7,
+      "tps": 32.22,
+      "total_tokens": 21,
+      "total_ms": 850.5,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 8,
+      "query": "What is the battery capacity of the AORUS MASTER 16?",
+      "query_type": "shared_spec",
+      "answer": "根據提供的規格數據，所有提到的 AORUS MASTER 16 型號都使用 Lithium Polymer (Li-Poly) 電池材料且其電池容量都是 99 Wh。\n\n因此可以推斷出：AORUS MASTER 16 系列的所有版本（BZH、BYH 和 BXH）均具有相同的电池容量为 99 Wh。",
+      "expected_kw": [
+        "99Wh",
+        "Li Polymer"
+      ],
+      "hit_keywords": [],
+      "hit_rate": 0.0,
+      "ttft_ms": 236.1,
+      "tps": 24.63,
+      "total_tokens": 77,
+      "total_ms": 3362.3,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 9,
+      "query": "What storage options are available on the BXH model?",
+      "query_type": "single_product",
+      "answer": "根據提供的規格數據，BXH模型提供了以下的(storage)選項：\n- 一個PCIe Gen5 M.2插槽。\n- 嚴謹來說，在現有的信息中並沒有提到第二個M.2插槽数量或其速度（僅提及了Gen4 x4）。\n\n因此，我們可以確定的是該機種提供了一個高帶寬的NVME固態硬碟接口供用戶使用。至于DDR5内存的最大支持容量和频率的信息与存储选项无关，并且只适用于系统记忆体部分描述。所以根据给定的数据，我们只能确定有单个M.2插槽用于SSD扩展。",
+      "expected_kw": [
+        "PCIe",
+        "Gen5 M.2",
+        "Gen4x4 M.2",
+        "4TB"
+      ],
+      "hit_keywords": [
+        "PCIe",
+        "Gen5 M.2"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 372.3,
+      "tps": 30.27,
+      "total_tokens": 132,
+      "total_ms": 4732.9,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    },
+    {
+      "id": 10,
+      "query": "Which model should I choose between BYH and BXH for gaming? What are the GPU differences?",
+      "query_type": "gpu_comparison",
+      "answer": "根據提供的規格數據，在選擇BYH和BXH之間進行遊戲時，應該考慮GPU的性能。比較兩者的顯卡可以發現：\n\n- **RTX™ 5080**：具有較高的AI Boost頻率(1902 MHz)，這意味著更高的自動化處理能力。\n  \n- **RTX™ 5070Ti**：雖然其AI Boost頻率为稍低一些（1962 MHz），但仍然提供了相對強大的計算力。\n\n因此，如果主要關注於高性能並希望獲得更好的自動運算效率的話，建議選用BYH模型；而對於消費級別或需要更節能設計的情況下則可考慮使用BXH模型。\n\n至於具體的不同點：\n- 显存容量不同：BYH有更大的16 GB显存，適合高負載情況下的多任務操作；\n- 功耗限制不同：BXH的最大图形功率为14",
+      "expected_kw": [
+        "5080",
+        "5070",
+        "16GB",
+        "12GB"
+      ],
+      "hit_keywords": [
+        "5080",
+        "5070"
+      ],
+      "hit_rate": 0.5,
+      "ttft_ms": 225.3,
+      "tps": 32.58,
+      "total_tokens": 193,
+      "total_ms": 6148.3,
+      "vram_used_mb": 4037,
+      "vram_model_mb": 3468
+    }
+  ]
+}
