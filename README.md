@@ -1,4 +1,4 @@
-# AORUS MASTER 16 — AI Hardware Spec Assistant (RAG)
+# AI Hardware Spec Assistant (RAG) - AORUS MASTER 16
 
 A **RAG system** for answering GIGABYTE AORUS MASTER 16 AM6H product specifications.
 
