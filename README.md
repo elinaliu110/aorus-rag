@@ -8,7 +8,6 @@ A **RAG system** for answering GIGABYTE AORUS MASTER 16 AM6H product specificati
 
 - **Bilingual queries** — Traditional Chinese × English mixed input supported
 - **Python RAG** — custom Chunking, Retrieval, Generation
-- **Dual-path retrieval** — Key filter (exact) + Vector search (semantic), minimising latency
 - **Streaming output** — Real-time token streaming with TTFT / TPS measurement
 - **Managed with `uv`** — Fast, reproducible Python environment
 
