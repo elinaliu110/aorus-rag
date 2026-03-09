@@ -57,8 +57,6 @@ aorus-rag/
 
 ---
 
----
-
 ## Setup (Colab)
 
 ### 1. Enable GPU Runtime
