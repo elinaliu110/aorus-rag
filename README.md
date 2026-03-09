@@ -302,4 +302,4 @@ T4-specific notes:
 
 - Full benchmark analysis (6 models × 10 queries): [docs/benchmark_report.md](docs/benchmark_report.md)
 - Raw results JSON / PNG: [results/vllm-gpu/](results/vllm-gpu/)
-- llama.cpp CPU edition: [README_llamacpp.md](README_llamacpp.md)
+- llama.cpp CPU edition: [llamacpp/README_llamacpp.md](llamacpp/README_llamacpp.md)
