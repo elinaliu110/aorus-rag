@@ -1,6 +1,6 @@
 # AORUS MASTER 16 — AI Spec Assistant (vLLM GPU Edition)
 
-This project implements a RAG-based spec Q&A system using **vLLM + AWQ INT4 quantized models** on GPU (Google Colab Tesla T4), benchmarked against the llama.cpp CPU baseline. The benchmark script manages the vLLM server lifecycle automatically — no manual server management required.
+This project implements a RAG-based spec Q&A system using **vLLM + AWQ INT4 quantized models** on GPU (Google Colab Tesla T4).
 
 ---
 
@@ -23,7 +23,7 @@ aorus-rag/
 │   ├── benchmark_cases.json        # Evaluation queries (10 cases)
 │   └── embeddings.npy              # Vector cache
 │
-├── results/                        # Benchmark output
+├── results/vllm-gpu                # Benchmark output
 └── docs/
     └── benchmark_report.md
 ```
@@ -194,11 +194,11 @@ Output files in `results/`:
 
 ### 3B Models Results
 
-| Model | Hit Rate | Avg TTFT | Avg TPS | Model VRAM Δ | 4GB Ready |
-|-------|:--------:|:--------:|:-------:|:------------:|:---------:|
-| **AMead10 Llama-3.2-3B** ✅ | **84.0%** | 269 ms | 36.1 tok/s | 3,492 MB | ✅ |
-| casperhansen Llama-3.2-3B | 81.5% | **241 ms** | **37.9 tok/s** | 3,540 MB | ❌ +11 MB |
-| Qwen2.5-3B | 58.2% | 274 ms | 31.0 tok/s | **3,468 MB** | ✅ |
+| Model | Hit Rate | Avg TTFT | Avg TPS | Model VRAM Δ | Loaded VRAM Δ | 4GB Ready |
+|-------|:--------:|:--------:|:-------:|:------------:|:------------:|:---------:|
+| **AMead10 Llama-3.2-3B** | **84.0%** | 269 ms | 36.1 tok/s | 3,492 MB | 4,059 MB | ✅ |
+| casperhansen Llama-3.2-3B | 81.5% | **241 ms** | **37.9 tok/s** | 3,540 MB | 4,107 MB | ❌ +11 MB |
+| Qwen2.5-3B | 58.2% | 274 ms | 31.0 tok/s | **3,468 MB** | 4,035 MB | ✅ |
 
 ### 1B Models Results
 
@@ -208,11 +208,9 @@ Output files in `results/`:
 | casperhansen Llama-3.2-1B | 40.3% | **132 ms** | 56.6 tok/s | **3,398 MB** | ✅ |
 | AMead10 Llama-3.2-1B | 32.0% | 133 ms | **57.4 tok/s** | 3,446 MB | ✅ |
 
-> **Recommended: `AMead10/Llama-3.2-3B-Instruct-AWQ`** — highest accuracy (84%), strictly 4 GB compliant, 100% on `single_product` queries.
->
-> ⚠️ **1B models are not recommended.**: Overall accuracy of 32–40% is not acceptable.
-
-Full per-query analysis → [docs/benchmark_report.md](docs/benchmark_report.md)
+> **Recommended: `AMead10/Llama-3.2-3B-Instruct-AWQ`** — highest accuracy (84%), strictly 4 GB compliant.
+> **1B models are not recommended:** Overall accuracy of 32–40% is not acceptable.
+> Full per-query analysis → [docs/benchmark_report.md](docs/benchmark_report.md)
 
 ---
 
