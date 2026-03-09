@@ -1,6 +1,6 @@
 # Benchmark Evaluation Report (llama-cpp CPU Edition)
 
-> CPU & Colab environment | 6 models × 10 queries · benchmark_cases.json
+> CPU & Colab environment · 6 models × 10 queries · benchmark_cases.json
 
 > Covers: Llama-3.2-3B Q5_K_M / Qwen2.5-3B Q5_K_M / Phi-4-mini Q5_K_M
 
@@ -25,7 +25,7 @@
 |-------|:--------:|:----------:|:---:|:--------:|:-----------:|:--------------:|
 | **Llama-3.2-3B Q5_K_M** | **91.5%** | 127,845 ms | 2.2 | 85.8% | 100% | **100%** |
 | Llama-3.2-3B Q4_K_M | 84.0% | **73,022 ms** | **2.6** | 77.5% | 100% | 87.5% |
-| Qwen2.5-3B Q5_K_M | 82.5% | 145,409 ms | 2.2 | 70.8% | 70.8% | 100% | **100%** |
+| Qwen2.5-3B Q5_K_M | 82.5% | 145,409 ms | 2.2 | 100% | 70.8% | 100% | **100%** |
 | Qwen2.5-3B Q4_K_M | 77.0% | 81,512 ms | 2.6 | 74.2% | 75.0% | 87.5% |
 | Phi-4-mini Q4_K_M | 69.0% | 96,480 ms | 2.2 | 73.3% | 75.0% | 50.0% |
 | Phi-4-mini Q5_K_M | 69.0% | 163,269 ms | 1.9 | 65.0% | 75.0% | 75.0% |
