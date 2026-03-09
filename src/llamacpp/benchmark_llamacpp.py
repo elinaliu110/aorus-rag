@@ -23,7 +23,7 @@ import time
 import psutil
 
 from vector_index import VectorIndex
-from retrieval_generate import (
+from retrieval_generate_llamacpp import (
     retrieve,
     build_context,
     generate_stream,

@@ -19,7 +19,7 @@ import sys
 sys.path.insert(0, os.path.dirname(__file__))
 
 from vector_index import VectorIndex, SUPPORTED_MODELS, DEFAULT_MODEL
-from retrieval_generate import (
+from retrieval_generate_llamacpp import (
     retrieve,
     build_context,
     generate_stream,
