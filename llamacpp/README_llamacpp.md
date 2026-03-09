@@ -1,6 +1,7 @@
 # AORUS MASTER 16 — AI Spec Assistant (llama-cpp CPU Edition)
 
 This project implements a RAG-based spec Q&A system using llama-cpp quantized models on CPU (Google Colab).
+
 ---
 <!-- 
 ## Project Structure
