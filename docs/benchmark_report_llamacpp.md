@@ -1,6 +1,9 @@
-# Benchmark Evaluation Report
+# Benchmark Evaluation Report (llama-cpp CPU Edition)
 
 > CPU & Colab environment | 6 models × 10 queries · benchmark_cases.json
+
+> Covers: Llama-3.2-3B Q5_K_M / Qwen2.5-3B Q5_K_M / Phi-4-mini Q5_K_M
+
 ---
 
 ## Evaluation Environment
@@ -19,7 +22,7 @@
 ## 1. Overall Results
 
 | Model | Hit Rate | TTFT (avg) | TPS | shared_spec | single_product | gpu_comparison |
-|-------|:--------:|:----------:|:---:|:--------:|:-----------:|:--------------:|:--------------:|
+|-------|:--------:|:----------:|:---:|:--------:|:-----------:|:--------------:|
 | **Llama-3.2-3B Q5_K_M** | **91.5%** | 127,845 ms | 2.2 | 85.8% | 100% | **100%** |
 | Llama-3.2-3B Q4_K_M | 84.0% | **73,022 ms** | **2.6** | 77.5% | 100% | 87.5% |
 | Qwen2.5-3B Q5_K_M | 82.5% | 145,409 ms | 2.2 | **3,506 MB** | 70.8% | 100% | **100%** |
@@ -107,7 +110,9 @@ Q6 (*"What are the keyboard, audio, and webcam specs of the AORUS MASTER 16?"*) 
 | Qwen Q5 | **0%** | Model claims all three fields are unavailable |
 | Phi Q4/Q5 | 40% | Same as Llama; Audio/Webcam not retrieved |
 
-**Root cause:** Although bilingual chunks have been created, `Keyboard`, `Audio`, and `Webcam` remain three **separate chunks**. With `top_k=5`, all three cannot be retrieved simultaneously. **Proposed fix:** Merge these three fields into a single "Input & Multimedia" composite chunk, or increase `top_k` to 8 for multi-field queries.
+**Root cause:** Although bilingual chunks have been created, `Keyboard`, `Audio`, and `Webcam` remain three **separate chunks**. With `top_k=5`, all three cannot be retrieved simultaneously. 
+
+**Proposed fix:** Merge these three fields into a single "Input & Multimedia" composite chunk, or increase `top_k` to 8 for multi-field queries.
 
 ---
 
@@ -117,7 +122,7 @@ All models show a **TTFT minimum at Q2** (15,000–35,000 ms): Q2 queries a spec
 
 TTFT peaks occur at **Q1 (long context)** and **Q7 (Display field with many attributes)**, confirming that context length is the dominant factor in TTFT variance.
 
-CPU utilization stays consistently at **80–100%** across all queries, indicating the system is fully CPU-bound. GPU inference would be expected to reduce TTFT to the 5–15 second range.
+CPU utilization stays consistently at **80–100%** across all queries, indicating the system is fully CPU-bound.
 
 ---
 
