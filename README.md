@@ -285,7 +285,7 @@ Assessment method: model VRAM delta (Δ) after loading ≤ 4,096 MB.
 T4-specific notes:
 - **`--enforce-eager` is required**: T4 compute capability is 7.5; FlashAttention2 requires ≥ 8.0 (A100/H100). The script automatically sets `VLLM_ATTENTION_BACKEND=XFORMERS`.
 - Default `--gpu-util 0.85` on a T4 allocates ~13 GB VRAM.
-- To simulate 4 GB: use `--gpu-util 0.26` (15 GB × 0.26 ≈ 4 GB).
+- To simulate 4 GB: use `--gpu-util 0.19` (VRAM idle: 567 MB + 15 GB × 0.19 ≈ 4 GB).
 
 ---
 
@@ -305,5 +305,5 @@ T4-specific notes:
 ## Results & Docs
 
 - Full benchmark analysis (6 models × 10 queries): [docs/benchmark_report.md](docs/benchmark_report.md)
-- Raw results JSON / PNG: [results/](results/)
-- llama.cpp CPU edition: [README_llamacpp.md](README.md)
+- Raw results JSON / PNG: [results/vllm-gpu/](results/vllm-gpu/)
+- llama.cpp CPU edition: [README_llamacpp.md](README_llamacpp.md)
