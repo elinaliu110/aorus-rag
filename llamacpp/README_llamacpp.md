@@ -44,7 +44,7 @@ aorus-rag/
 
 ### Prerequisites
 - Python 3.11+
-- [uv](https://github.com/astral-sh/uv) — install with `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- `!pip install uv -q`
 
 ### 1. Clone & Install
 
@@ -115,16 +115,16 @@ aorus-rag/
 
 All tests run on CPU.
 
-| Model | Hit Rate | Avg TTFT | TPS | RAM Peak |
-|-------|:--------:|:--------:|:---:|:--------:|
-| **Llama-3.2-3B Q5_K_M** | **91.5%** | 127,845 ms | 2.2 | 3,848 MB |
-| Llama-3.2-3B Q4_K_M | 84.0% | **73,022 ms** | **2.6** | 4,858 MB |
-| Qwen2.5-3B Q5_K_M | 82.5% | 145,409 ms | 2.2 | **3,506 MB** |
-| Qwen2.5-3B Q4_K_M | 77.0% | 81,512 ms | 2.6 | 4,447 MB |
-| Phi-4-mini Q4_K_M | 69.0% | 96,480 ms | 2.2 | 5,283 MB |
-| Phi-4-mini Q5_K_M | 69.0% | 163,269 ms | 1.9 | 4,624 MB |
+| Model | Hit Rate | Avg TTFT | TPS |
+|-------|:--------:|:--------:|:---:|
+| **Llama-3.2-3B Q5_K_M** | **91.5%** | 127,845 ms | 2.2 |
+| Llama-3.2-3B Q4_K_M | 84.0% | **73,022 ms** | **2.6** |
+| Qwen2.5-3B Q5_K_M | 82.5% | 145,409 ms | 2.2 |
+| Qwen2.5-3B Q4_K_M | 77.0% | 81,512 ms | 2.6 |
+| Phi-4-mini Q4_K_M | 69.0% | 96,480 ms | 2.2 |
+| Phi-4-mini Q5_K_M | 69.0% | 163,269 ms | 1.9 |
 
-**Recommended:** `Llama-3.2-3B-Instruct-Q5_K_M` with highest accuracy, RAM well within 4 GB limit.
+**Recommended:** `Llama-3.2-3B-Instruct-Q5_K_M` with highest accuracy.
 
 >  Full analysis: [docs/benchmark_report_llamacpp.md](docs/benchmark_report_llamacpp.md)
 
@@ -134,10 +134,9 @@ All tests run on CPU.
 
 | Scenario | Model | Reason |
 |----------|-------|--------|
-| **Accuracy-first** (default) | Llama-3.2-3B Q5_K_M | 91.5% hit rate, 3.8 GB RAM |
+| **Accuracy-first** (default) | Llama-3.2-3B Q5_K_M | 91.5% hit rate|
 | **Speed-first** | Llama-3.2-3B Q4_K_M | 43% faster TTFT, 84% accuracy |
-| **RAM-minimal** | Qwen2.5-3B Q5_K_M | 82.5% accuracy, 3.5 GB RAM |
-| Not recommended | Phi-4-mini (both) | 69% accuracy, highest RAM |
+| Not recommended | Phi-4-mini (both) | 69% accuracy |
 
 ---
 
