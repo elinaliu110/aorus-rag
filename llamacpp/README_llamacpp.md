@@ -1,0 +1,229 @@
+# AI Hardware Spec Assistant (RAG) - AORUS MASTER 16
+
+A **RAG system** for answering GIGABYTE AORUS MASTER 16 AM6H product specifications.
+
+---
+
+## Key Features
+
+- **Bilingual queries** — Traditional Chinese × English mixed input supported
+- **Python RAG** — custom Chunking, Retrieval, Generation
+- **Streaming output** — Real-time token streaming with TTFT / TPS measurement
+- **Managed with `uv`** — Fast, reproducible Python environment
+
+---
+
+## Project Structure
+
+```
+aorus-rag/
+├── README.md                      
+├── pyproject.toml                 # uv environment & dependencies
+├── .gitignore
+│
+├── src/
+│   ├── chunk_create.py            # specs.csv → bilingual chunks JSON
+│   ├── vector_index.py            # Embedding index + exact key lookup
+│   ├── retrieval_generate.py      # Filter extraction, retrieval, streaming LLM
+│   ├── benchmark.py               # Quantitative evaluation (Hit Rate / TTFT / TPS)
+│   └── chat.py                    # Interactive Q&A entry point
+│
+├── data/
+│   ├── specs.csv                  # Raw AORUS MASTER 16 specification sheet
+│   ├── chunks.json                # Bilingual chunks
+│   ├── embeddings.npy             # Embedding cache
+│   └── benchmark_cases.json       # Evaluation test cases (10 queries: 5 ZH + 5 EN)
+│
+├── models/                        # GGUF model files
+│
+├── results/                       # Benchmark outputs (PNG charts + Ans JSON)
+│   ├── Llama-3.2-3B_benchmark/
+│   ├── Phi-4-mini_benchmark/
+│   └── Qwen2.5-3B_benchmark/
+│
+├── docs/
+│   └── benchmark_report.md     # benchmark analysis
+│
+└── scripts/
+    └── download_model.py       # GGUF model download helper
+```
+
+---
+
+## Quick Start
+
+### Prerequisites
+- Python 3.11+
+- [uv](https://github.com/astral-sh/uv) — install with `curl -LsSf https://astral.sh/uv/install.sh | sh`
+
+### 1. Clone & Install
+
+```bash
+!git clone https://github.com/elinaliu110/RAG-AORUS.git
+%cd aorus-rag
+!uv sync
+```
+
+### 2. Download a Model
+
+```bash
+# Recommended (highest accuracy — 91.5% hit rate)
+!uv run python scripts/download_model.py --model llama-3.2-3b-q5
+
+# Speed-optimised alternative
+!uv run python scripts/download_model.py --model llama-3.2-3b-q4
+
+# List all available models
+!uv run python scripts/download_model.py --list
+```
+
+### 3. Build the Vector Index
+
+```bash
+!uv run python src/vector_index.py \
+    --chunks data/chunks.json \
+    --emb    data/embeddings.npy
+```
+
+> **Note:** If you regenerate `chunks.json` via `chunk_create.py`, always rebuild embeddings with `--force`.
+
+### 4. Interactive Q&A
+
+```bash
+!uv run python src/chat.py \
+    --model  models/Llama-3.2-3B-Instruct-Q5_K_M.gguf \
+    --chunks data/chunks.json \
+    --emb    data/embeddings.npy
+```
+
+
+### 4. Interactive Q&A vllm
+
+```bash
+!uv run python src/chat.py \
+    --model AMead10/Llama-3.2-3B-Instruct-AWQ \
+    --gpu-util 0.189 \
+    --max-model-len 1024 \
+    --enforce-eager \
+    --chunks data/chunks.json \
+    --emb data/embeddings.npy
+
+```
+
+**Example queries:**
+```
+>>> AORUS MASTER 16 支援哪些作業系統？
+>>> What is the AORUS MASTER 16 BXH battery capacity?
+```
+
+### 5. Run Benchmark
+
+```bash
+!uv run python src/benchmark.py \
+    --model  models/Llama-3.2-3B-Instruct-Q5_K_M.gguf \
+    --chunks data/chunks.json \
+    --emb    data/embeddings.npy \
+    --cases  data/benchmark_cases.json \
+    --out    results/benchmark_results_Llama-Q5.json
+```
+
+
+### 5. Run Benchmark vllm
+
+```bash
+!uv run python src/benchmark_vllm.py \
+    --chunks data/chunks.json \
+    --emb data/embeddings.npy \
+    --cases data/benchmark_cases.json \
+    --models casperhansen/llama-3.2-1b-instruct-awq,Qwen/Qwen2.5-1.5B-Instruct-AWQ,AMead10/Llama-3.2-1B-Instruct-AWQ \
+    --gpu-util 0.187 \
+    --max-model-len 1024 \
+    --enforce-eager \
+    --out-dir results_4gb
+```
+
+---
+
+## System Architecture
+
+```
+        User Query (ZH / EN / Mixed)
+                   │
+                   ▼
+┌──────────────────────────────────────────┐
+│  Stage C-1 · Filter Extraction           │
+│  ├─ extract_product_filter()             │  → BZH / BYH / BXH / None
+│  └─ extract_key_filter()                 │  → spec key alias match
+└──────────────────┬───────────────────────┘
+                   │
+         ┌─────────▼──────────┐
+         │  Key Filter hit?   │
+         └──┬─────────────┬───┘
+         Yes│             │No
+            ▼             ▼
+    Exact chunk       Vector Search
+    retrieval         (multilingual-MiniLM cosine)
+    (no encoding)
+            │             │
+            └──────┬──────┘
+                   ▼
+        build_context()   ← bilingual text, max 1400 tokens
+                   │
+                   ▼
+        llama.cpp GGUF inference
+        Streaming · TTFT / TPS measurement
+                   │
+                   ▼
+            Answer (ZH or EN)
+```
+## Model Benchmark Summary (CPU)
+
+All tests run on CPU.
+
+| Model | Hit Rate | Avg TTFT | TPS | RAM Peak |
+|-------|:--------:|:--------:|:---:|:--------:|
+| **Llama-3.2-3B Q5_K_M** | **91.5%** | 127,845 ms | 2.2 | 3,848 MB |
+| Llama-3.2-3B Q4_K_M | 84.0% | **73,022 ms** | **2.6** | 4,858 MB |
+| Qwen2.5-3B Q5_K_M | 82.5% | 145,409 ms | 2.2 | **3,506 MB** |
+| Qwen2.5-3B Q4_K_M | 77.0% | 81,512 ms | 2.6 | 4,447 MB |
+| Phi-4-mini Q4_K_M | 69.0% | 96,480 ms | 2.2 | 5,283 MB |
+| Phi-4-mini Q5_K_M | 69.0% | 163,269 ms | 1.9 | 4,624 MB |
+
+**Recommended:** `Llama-3.2-3B-Instruct-Q5_K_M` with highest accuracy, RAM well within 4 GB limit.
+
+>  Full analysis: [docs/benchmark_report.md](docs/benchmark_report.md)
+
+---
+
+## Model Selection Rationale
+
+| Scenario | Model | Reason |
+|----------|-------|--------|
+| **Accuracy-first** (default) | Llama-3.2-3B Q5_K_M | 91.5% hit rate, 3.8 GB RAM |
+| **Speed-first** | Llama-3.2-3B Q4_K_M | 43% faster TTFT, 84% accuracy |
+| **RAM-minimal** | Qwen2.5-3B Q5_K_M | 82.5% accuracy, 3.5 GB RAM |
+| Not recommended | Phi-4-mini (both) | 69% accuracy, highest RAM |
+
+---
+
+## Dependencies
+
+| Package | Purpose |
+|---------|---------|
+| `llama-cpp-python` | GGUF inference engine |
+| `sentence-transformers` | Multilingual embedding model |
+| `numpy` | Embedding vector operations |
+| `psutil` | CPU / RAM monitoring during benchmark |
+| `matplotlib` | Benchmark chart generation |
+
+---
+
+## Notes
+
+- **No GPU data available** in current benchmarks — all results are CPU-only.
+  GPU inference is expected to reduce TTFT to ~5–15 seconds.
+- **`data/embeddings.npy`** is gitignored. Rebuild after any chunk changes:
+  ```bash
+  uv run python src/vector_index.py --chunks data/chunks.json --emb data/embeddings.npy --force
+  ```
+- **`models/`** is gitignored. Use `scripts/download_model.py` to fetch GGUF files.

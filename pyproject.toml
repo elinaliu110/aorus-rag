@@ -1,15 +1,24 @@
 [project]
 name = "aorus-rag"
-version = "0.1.0"
-description = "AORUS MASTER 16 AI Hardware Spec Assistant — Pure Python RAG"
+version = "0.2.0"
+description = "AORUS MASTER 16 AI Hardware Spec Assistant — vLLM RAG"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "llama-cpp-python>=0.3.0",
+    # vLLM + OpenAI-compatible client
+    "vllm>=0.4.0",
+    "openai>=1.30.0",
+
+    # Embedding & Vector Search
     "sentence-transformers>=3.0.0",
     "numpy>=1.26.0",
+
+    # Metrics & Chart
     "psutil>=5.9.0",
     "matplotlib>=3.8.0",
+
+    # HuggingFace model download
+    "huggingface-hub>=0.23.0",
 ]
 
 [dependency-groups]
