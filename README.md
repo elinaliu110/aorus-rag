@@ -203,7 +203,7 @@ Output files in `results/`:
 ### 1B Models Results
 
 | Model | Hit Rate | Avg TTFT | Avg TPS | Model VRAM Δ | Inference VRAM Δ | 4GB Ready |
-|-------|:--------:|:--------:|:-------:|:------------:|:---------:|
+|-------|:--------:|:--------:|:-------:|:------------:|:---------:|:---------:|
 | Qwen2.5-1.5B | 53.7% | 202 ms | 36.5 tok/s | 3,462 MB | 4,015 MB | ✅ |
 | casperhansen Llama-3.2-1B | 40.3% | **132 ms** | 56.6 tok/s | **3,398 MB** | 3,965 MB | ✅ |
 | AMead10 Llama-3.2-1B | 32.0% | 133 ms | **57.4 tok/s** | 3,446 MB | 4,032 MB | ✅ |
